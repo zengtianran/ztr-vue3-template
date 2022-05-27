@@ -1,0 +1,13 @@
+// variables
+$background-color: #f8f8f8;
+$theme-color: #07b0b8;
+$header-height: 60px;
+// ios底部安全区域
+$safe-bottom: constant(safe-area-inset-bottom);
+$safe-bottom: env(safe-area-inset-bottom);
+
+// 字体颜色
+$text-color: #f00e3f; // 默认
+$text-color-light: #e6e6e6; // 浅色
+$text-color-dark: #333333; // 深色
+$text-color-secondary: #999999; // 次要颜色
