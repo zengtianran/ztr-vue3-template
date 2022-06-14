@@ -18,19 +18,19 @@ export default defineComponent({
     type: {
       type: String,
       require: true,
-      default: "text",
+      default: "text"
     },
     value: {
-      type: String,
+      type: String
     },
     placeholder: {
       type: String,
-      default: "请输入内容",
+      default: "请输入内容"
     },
     extraClass: {
       type: String,
-      default: "",
-    },
+      default: ""
+    }
   },
   emits: ["update:value"],
   setup(props, context) {
@@ -38,12 +38,15 @@ export default defineComponent({
       context.emit("update:value", ($event.target as HTMLInputElement).value);
     };
     return {
-      handleInp,
+      handleInp
     };
-  },
+  }
 });
 </script>
 <style lang="scss" scoped>
+.inp-groups {
+  font-size: 14px;
+}
 .g-input {
   border: none;
   outline: none;
@@ -53,7 +56,7 @@ export default defineComponent({
   line-height: 90px;
   box-sizing: border-box;
   font-size: 30px;
-  color: #ddd;
+  color: #222222;
   &::placeholder {
     color: #ddd;
   }
