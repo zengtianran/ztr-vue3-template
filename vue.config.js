@@ -1,7 +1,8 @@
 const path = require("path");
 const chalk = require("chalk");
-const merge = require("webpack-merge");
-const tsImportPluginFactory = require("ts-import-plugin");
+const configExtend = require("./vue.config.extend");
+
+const IS_PRODUCTION = process.env.NODE_ENV === "production";
 // 代理请求回调
 const onProxyReq = (proxyReq) => {
   const { sockets } = proxyReq.agent;
@@ -9,31 +10,24 @@ const onProxyReq = (proxyReq) => {
   console.log(chalk.green(`当前请求代理到: ${keys[0]}${sockets[keys[0]][0]._httpMessage.path}`));
 };
 module.exports = {
+  // publicPath: "./", // 署应用包时的基本 URL。 vue-router hash 模式使用
+  // publicPath: '/app/', //署应用包时的基本 URL。  vue-router history模式使用
+  // outputDir: "dist", //  生产环境构建文件的目录
+  // assetsDir: "static", //  outputDir的静态资源(js、css、img、fonts)目录
+  productionSourceMap: false, // 是否开启sourceMap
   lintOnSave: false, // eslint保存检查
   // 链式调用配置webpack
   chainWebpack: (config) => {
-    config.resolve.alias.set("@", path.resolve("src"));
-    config.module
-      .rule("ts")
-      .use("ts-loader")
-      .tap((options) => {
-        options = merge(options, {
-          transpileOnly: true,
-          getCustomTransformers: () => ({
-            before: [
-              tsImportPluginFactory({
-                libraryName: "vant",
-                libraryDirectory: "es",
-                style: true
-              })
-            ]
-          }),
-          compilerOptions: {
-            module: "es2015"
-          }
-        });
-        return options;
-      });
+    configExtend.resolveAlias(config);
+    configExtend.tsImportPlugin(config);
+    config.when(IS_PRODUCTION, (config) => {
+      // 打包优化
+      configExtend.optimization(config);
+      // gZip压缩
+      configExtend.assetsGzip(config);
+      // bundle分析
+      configExtend.bundleAnalyzer(config);
+    });
   },
   css: {
     loaderOptions: {
