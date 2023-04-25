@@ -30,7 +30,7 @@ withDefaults(defineProps<ISearchProps>(), {
 let inpVal = ref<string>("");
 // 搜索框触发事件
 const handleSearch = () => {
-  emit("search", inpVal);
+  emit("search", inpVal.value);
 };
 </script>
 
