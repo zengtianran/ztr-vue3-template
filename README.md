@@ -238,11 +238,20 @@ pnpm run build
      }
      ```
    
-- 14、
-  
-TODO: request封装、cache封装、
+- 14、request封装、cache封装
+  > 根目录新建utils文件夹，封装request统一请求，cache类封装
 
-- 15、项目目录
+- 15、MOCK服务搭建
+  1. 安装模块
+  ```bash
+    npm i path-to-regexp@2.4.0 mockjs@1.0.1-beta3 serve-static@1.13.2 chalk@2.4.2 connect@3.6.6 -D
+  ```
+  2. 根目录创建mock文件夹, 封装mock-server
+
+- 16、todo 封装store
+  
+
+- 项目目录
     ├── .husky                              // husky git hooks配置目录
         ├── _                               // husky 脚本生成的目录文件
         ├── commit-msg                      // commit-msg钩子，用于验证 message格式

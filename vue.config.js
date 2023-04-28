@@ -63,16 +63,17 @@ module.exports = {
     open: false,
     https: false,
     host: "0.0.0.0",
-    proxy: {
-      "/api": {
-        target: process.env.VUE_APP_API_SERVER,
-        changeOrigin: true,
-        secure: false,
-        pathRewrite: {
-          "^/api": "/api"
-        },
-        onProxyReq
-      }
-    }
+    // proxy: {
+    //   "/api2": {
+    //     target: process.env.VUE_APP_API_SERVER,
+    //     changeOrigin: true,
+    //     secure: false,
+    //     pathRewrite: {
+    //       "^/api": "/api"
+    //     },
+    //     onProxyReq
+    //   }
+    // },
+    before: require("./mock/mock-server.js")
   }
 };
