@@ -7,12 +7,17 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { useStore } from "@/store/index";
 import GTopSearch from "../components/GTopSearch.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
     GTopSearch
+  },
+  setup() {
+    const store = useStore();
+    console.log("Home :>> ", store.state.user.pass);
   }
 });
 </script>

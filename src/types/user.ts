@@ -10,3 +10,16 @@ export interface IUserListRes {
   display_time: string;
   page_views: string;
 }
+
+export interface IUserRelation {
+  name: string;
+  age: number;
+}
+export interface IUserLoginInfo {
+  name: string;
+  nickName: string;
+  pass: number;
+  age: number;
+  relation: IUserRelation;
+  level: string[];
+}

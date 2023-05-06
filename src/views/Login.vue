@@ -1,5 +1,6 @@
 <template>
   <div class="login-wrap">
+    <div class="login-top__title">{{ userInfo.name }}</div>
     <van-form @submit="onSubmit">
       <van-cell-group inset>
         <van-field
@@ -22,34 +23,73 @@
         <van-button block type="primary" native-type="submit"> 提交 </van-button>
       </div>
     </van-form>
+    <injection></injection>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, provide, Ref } from "vue";
 import { Form, Field, CellGroup, Button } from "vant";
+import { userInjectionKey, setUserInjectionKey } from "./components/type";
+import { UserActionTypes } from "@/store/modules/user/action-types";
+import { IUserLoginInfo } from "@/types/user";
+import { useStore } from "@/store/index";
+import Injection from "./components/Injection.vue";
 export default defineComponent({
   name: "Login",
   components: {
     [Form.name]: Form,
     [Button.name]: Button,
     [Field.name]: Field,
-    [CellGroup.name]: CellGroup
+    [CellGroup.name]: CellGroup,
+    Injection
   },
   setup(props, context) {
+    const store = useStore();
     let username = ref("");
     let password = ref("");
+    const userInfo = ref<IUserLoginInfo>({
+      name: "zs",
+      nickName: "",
+      pass: 123456,
+      age: 12,
+      relation: {
+        name: "",
+        age: 12
+      },
+      level: ["123"]
+    });
+    // 修改用户信息数据，确保在数据提供的位置进行数据修改
+    const setUser = (userData: IUserLoginInfo) => {
+      userInfo.value.name = userData.name;
+      userInfo.value.nickName = userData.nickName;
+      userInfo.value.pass = userData.pass;
+      userInfo.value.age = userData.age;
+    };
+    // provide
+    provide(userInjectionKey, userInfo);
+    provide(setUserInjectionKey, setUser);
     const onSubmit = () => {
       console.log("onSubmit :>> ", username.value, password.value);
+      // 登录操作
+      store.dispatch(UserActionTypes.LOGIN, "898989");
     };
 
     return {
       username,
       password,
+      userInfo,
       onSubmit
     };
   }
 });
 </script>
 
-<style lang="less" scoped></style>
+<style lang="scss" scoped>
+.login-top__title {
+  text-align: left;
+  color: #767676;
+  font-size: 34px;
+  padding-left: 30px;
+}
+</style>
