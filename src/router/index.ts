@@ -10,7 +10,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/login",
     name: "Login",
-    component: () => import(/* webpackChunkName: "about" */ "../views/Login.vue")
+    component: () => import(/* webpackChunkName: "login" */ "../views/Login.vue")
   },
   {
     path: "/about",
@@ -23,7 +23,24 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/myStore",
     name: "MyStore",
-    component: () => import(/* webpackChunkName: "about" */ "../views/MyStore.vue")
+    component: () => import(/* webpackChunkName: "myStore" */ "../views/MyStore.vue")
+  },
+  {
+    path: "/challenges",
+    name: "challenges",
+    component: () => import(/* webpackChunkName: "challenges" */ "../views/challenges/Index.vue")
+  },
+  {
+    path: "/requestIdleCallback",
+    name: "requestIdleCallback",
+    component: () =>
+      import(/* webpackChunkName: "requestIdleCallback" */ "../views/requestIdleCallback/Index.vue")
+  },
+  {
+    path: "/locationTest",
+    name: "locationTest",
+    component: () =>
+      import(/* webpackChunkName: "requestIdleCallback" */ "../views/Location/Index.vue")
   }
 ];
 

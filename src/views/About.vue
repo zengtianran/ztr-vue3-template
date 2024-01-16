@@ -3,6 +3,11 @@
     <h1>This is an about page</h1>
     <span>{{ _data }}</span>
   </div>
+
+  <Teleport to="body">
+    <span class="cls-teleport">{{ teleportMsg }}</span>
+  </Teleport>
+
   <Tabbar v-model="active">
     <TabbarItem name="home" icon="home-o">标签</TabbarItem>
     <TabbarItem name="search" icon="search">标签</TabbarItem>
@@ -15,6 +20,8 @@ import { onMounted, ref } from "vue";
 import { Tabbar, TabbarItem } from "vant";
 const _data = ref("vue3.2.1");
 let active = ref<string>("home");
+
+const teleportMsg = ref("teleportMsg");
 
 onMounted(() => {
   console.log("onMounted :>> ", "onMounted");

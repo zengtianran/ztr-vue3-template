@@ -1,28 +1,26 @@
 <template>
-  <div class="home">
-    <h3 class="tips-title">输入框</h3>
-    <g-top-search type="text" placeholder="请输入关键字" />
+  <div class="wrap">
+    <div class="request-idle-callback">requestIdleCallback</div>
     <van-button block type="primary" @click="jumpOut"> 跳转测试 </van-button>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useStore } from "@/store/index";
 import { Button } from "vant";
-import GTopSearch from "../components/GTopSearch.vue";
-
+// type;
 export default defineComponent({
-  name: "Home",
+  name: "RequestIdleCallback",
   components: {
-    GTopSearch,
     [Button.name]: Button
   },
-  setup() {
-    const store = useStore();
-    console.log("Home :>> ", store.state.user.pass);
+  setup(props, context) {
     // 测试回退监听问题
     const url = "https://www.ylzpay.com/goldpay/goldplanPay.html";
+    const workLoop = () => {};
+    (window as any).requestIdleCallback(workLoop, {
+      timeout: 1500
+    });
 
     window.addEventListener(
       "popstate",
@@ -42,10 +40,12 @@ export default defineComponent({
   }
 });
 </script>
+
 <style lang="scss" scoped>
-.tips-title {
-  text-align: left;
-  color: $text-color;
-  font-size: 30px;
+.wrap {
+  padding-top: 100px;
+}
+.request-idle-callback {
+  font-size: 24px;
 }
 </style>

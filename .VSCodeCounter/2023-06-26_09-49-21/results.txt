@@ -1,0 +1,97 @@
+Date : 2023-06-26 09:49:21
+Directory : /Users/zengtianran/Documents/myProject/ztr-v3-template/src
+Total : 44 files,  2028 codes, 140 comments, 289 blanks, all 2457 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Vue        |         15 |        695 |          9 |         67 |        771 |
+| CSS        |          2 |        462 |         19 |         89 |        570 |
+| TypeScript |         20 |        396 |         82 |         69 |        547 |
+| SCSS       |          4 |        296 |         30 |         45 |        371 |
+| Markdown   |          1 |        125 |          0 |         17 |        142 |
+| JSON       |          1 |         37 |          0 |          1 |         38 |
+| JavaScript |          1 |         17 |          0 |          1 |         18 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                   | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                      |         44 |      2,028 |        140 |        289 |      2,457 |
+| . (Files)                                                                                              |          3 |         53 |          3 |          9 |         65 |
+| api                                                                                                    |          1 |         15 |         10 |          4 |         29 |
+| assets                                                                                                 |          3 |        499 |         19 |         90 |        608 |
+| assets/iconfont                                                                                        |          3 |        499 |         19 |         90 |        608 |
+| components                                                                                             |          3 |        170 |          0 |          6 |        176 |
+| plugins                                                                                                |          1 |         17 |          0 |          1 |         18 |
+| router                                                                                                 |          1 |         46 |          3 |          4 |         53 |
+| store                                                                                                  |          8 |        106 |         18 |         28 |        152 |
+| store (Files)                                                                                          |          1 |         46 |         15 |         13 |         74 |
+| store/modules                                                                                          |          7 |         60 |          3 |         15 |         78 |
+| store/modules/user                                                                                     |          7 |         60 |          3 |         15 |         78 |
+| styles                                                                                                 |          4 |        296 |         30 |         45 |        371 |
+| types                                                                                                  |          2 |         28 |          0 |          4 |         32 |
+| utils                                                                                                  |          4 |        175 |         46 |         19 |        240 |
+| views                                                                                                  |         14 |        623 |         11 |         79 |        713 |
+| views (Files)                                                                                          |          4 |        221 |          0 |         22 |        243 |
+| views/Location                                                                                         |          2 |        210 |          0 |         27 |        237 |
+| views/challenges                                                                                       |          5 |        109 |          9 |         15 |        133 |
+| views/challenges (Files)                                                                               |          1 |         47 |          0 |          3 |         50 |
+| views/challenges/components                                                                            |          3 |         53 |          9 |          9 |         71 |
+| views/challenges/hooks                                                                                 |          1 |          9 |          0 |          3 |         12 |
+| views/components                                                                                       |          2 |         43 |          2 |          7 |         52 |
+| views/requestIdleCallback                                                                              |          1 |         40 |          0 |          8 |         48 |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                               | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/App.vue                                     | Vue        |         41 |          0 |          6 |         47 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/api/user.ts                                 | TypeScript |         15 |         10 |          4 |         29 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/assets/iconfont/demo.css                    | CSS        |        437 |         19 |         83 |        539 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/assets/iconfont/iconfont.css                | CSS        |         25 |          0 |          6 |         31 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/assets/iconfont/iconfont.json               | JSON       |         37 |          0 |          1 |         38 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/components/GIcon.vue                        | Vue        |         45 |          0 |          1 |         46 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/components/GInput.vue                       | Vue        |         63 |          0 |          2 |         65 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/components/GTopSearch.vue                   | Vue        |         62 |          0 |          3 |         65 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/main.ts                                     | TypeScript |          7 |          2 |          2 |         11 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/plugins/rem.js                              | JavaScript |         17 |          0 |          1 |         18 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/router/index.ts                             | TypeScript |         46 |          3 |          4 |         53 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/shims-vue.d.ts                              | TypeScript |          5 |          1 |          1 |          7 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/store/index.ts                              | TypeScript |         46 |         15 |         13 |         74 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/store/modules/user/action-types.ts          | TypeScript |          3 |          0 |          1 |          4 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/store/modules/user/actions.ts               | TypeScript |         15 |          1 |          3 |         19 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/store/modules/user/getters.ts               | TypeScript |          7 |          2 |          3 |         12 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/store/modules/user/index.ts                 | TypeScript |         11 |          0 |          2 |         13 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/store/modules/user/mutation-types.ts        | TypeScript |          4 |          0 |          1 |          5 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/store/modules/user/mutations.ts             | TypeScript |          8 |          0 |          3 |         11 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/store/modules/user/state.ts                 | TypeScript |         12 |          0 |          2 |         14 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/styles/index.scss                           | SCSS       |         54 |          1 |          8 |         63 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/styles/mixin.scss                           | SCSS       |         29 |          5 |          3 |         37 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/styles/reset.scss                           | SCSS       |        151 |          2 |         13 |        166 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/styles/variables.scss                       | SCSS       |         62 |         22 |         21 |        105 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/types/index.ts                              | TypeScript |          5 |          0 |          1 |          6 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/types/user.ts                               | TypeScript |         23 |          0 |          3 |         26 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/utils/cache.ts                              | TypeScript |         26 |          5 |          8 |         39 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/utils/config.ts                             | TypeScript |         26 |         16 |          6 |         48 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/utils/index.ts                              | TypeScript |         35 |          9 |          2 |         46 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/utils/request.ts                            | TypeScript |         88 |         16 |          3 |        107 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/About.vue                             | Vue        |         35 |          0 |          5 |         40 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/Home.vue                              | Vue        |         42 |          0 |          7 |         49 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/Location/Index.vue                    | Vue        |         85 |          0 |         10 |         95 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/Location/README.md                    | Markdown   |        125 |          0 |         17 |        142 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/Login.vue                             | Vue        |         92 |          0 |          4 |         96 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/MyStore.vue                           | Vue        |         52 |          0 |          6 |         58 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/challenges/Index.vue                  | Vue        |         47 |          0 |          3 |         50 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/challenges/components/DynamicsCss.vue | Vue        |         25 |          0 |          3 |         28 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/challenges/components/PropsType.vue   | Vue        |         16 |          9 |          3 |         28 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/challenges/components/ToggleState.vue | Vue        |         12 |          0 |          3 |         15 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/challenges/hooks/useToggle.ts         | TypeScript |          9 |          0 |          3 |         12 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/components/Injection.vue              | Vue        |         38 |          0 |          3 |         41 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/components/type.ts                    | TypeScript |          5 |          2 |          4 |         11 |
+| /Users/zengtianran/Documents/myProject/ztr-v3-template/src/views/requestIdleCallback/Index.vue         | Vue        |         40 |          0 |          8 |         48 |
+| Total                                                                                                  |            |      2,028 |        140 |        289 |      2,457 |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

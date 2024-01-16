@@ -14,7 +14,7 @@ module.exports = {
   // publicPath: '/app/', //署应用包时的基本 URL。  vue-router history模式使用
   // outputDir: "dist", //  生产环境构建文件的目录
   // assetsDir: "static", //  outputDir的静态资源(js、css、img、fonts)目录
-  productionSourceMap: false, // 是否开启sourceMap
+  productionSourceMap: true, // 是否开启sourceMap
   lintOnSave: false, // eslint保存检查
   // 链式调用配置webpack
   chainWebpack: (config) => {
@@ -28,6 +28,9 @@ module.exports = {
       // bundle分析
       configExtend.bundleAnalyzer(config);
     });
+  },
+  configureWebpack: {
+    devtool: 'source-map'
   },
   css: {
     loaderOptions: {
