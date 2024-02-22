@@ -1,0 +1,23 @@
+
+
+@mixin link-colors {
+    color: #eee;
+    &:hover {
+        color: #f90;
+    }
+    &.active {
+        color: #f8f;
+    }
+}
+
+
+a{
+    width: 200px !important;
+    height: 200px;
+    @include link-colors()
+}
+
+h1 {
+    width: 300px;
+    @include link-colors()
+}

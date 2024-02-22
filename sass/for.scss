@@ -1,0 +1,42 @@
+
+
+// 多值变量 , 使用 nth($变量名，$索引取值)
+// list形，类似js中数组，可以用空格、逗号、小括号分割多个值
+// 一维数组
+// $px: 10px 20px 30px 40px   
+// $px: 10px, 20px, 30px, 40px
+// 二维数组
+// $px: (10px, 20px) (30px, 40px)
+// $px: 10px 20px, 30px 40px
+
+$btnColors: '#eeeeee', '#f90', '#000000', '#d8d8', '#d8e9e9';
+
+@for $i from 1 through length($btnColors) {
+    .btn .type-#{$i} {
+        $color: nth($btnColors, $i);
+        background-color: $color;
+        color: #fff;
+        width: 100px;
+        &:hover {
+            color: $color;
+        }
+        &.active {
+            background-color: #000;
+        }
+    }
+}
+
+
+/* 
+map格式数据
+$header: (h1: 10px, h2: 20px, h3: 30px, h4: 40px)
+*/
+$headers: (h1: 10px, h2: 20px, h3: 30px, h4: 40px);
+
+@each $type, $size in $headers {
+    #{$type} {
+        width: 200px;
+        color: #fff;
+        font-size: $size;
+    }
+}

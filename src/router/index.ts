@@ -39,8 +39,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/locationTest",
     name: "locationTest",
-    component: () =>
-      import(/* webpackChunkName: "requestIdleCallback" */ "../views/Location/Index.vue")
+    component: () => import(/* webpackChunkName: "locationTest" */ "../views/Location/Index.vue")
+  },
+  {
+    path: "/theme",
+    name: "theme",
+    component: () => import(/* webpackChunkName: "theme" */ "../views/theme/Index.vue")
   }
 ];
 

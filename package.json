@@ -8,7 +8,8 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test": "lint-staged",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "sass": "node-sass -r ./sass -o ./sass/css"
   },
   "dependencies": {
     "axios": "^1.3.6",
@@ -40,10 +41,12 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
+    "glob": "^9.3.5",
     "husky": "^8.0.1",
     "jest": ">= 24 < 27 ",
     "lint-staged": "^13.0.1",
     "mockjs": "^1.0.1-beta3",
+    "node-html-parser": "^6.1.12",
     "node-sass": "^6.0.0",
     "path-to-regexp": "^2.4.0",
     "postcss": "^8.0.0",
@@ -55,8 +58,9 @@
     "terser-webpack-plugin": "^5.3.3",
     "ts-import-plugin": "^2.0.0",
     "typescript": "~4.1.5",
+    "url-regex": "^5.0.0",
     "vue-jest": "^5.0.0-0",
-    "webpack": "5.0.0",
+    "webpack": "^4.47.0",
     "webpack-bundle-analyzer": "^4.5.0"
   },
   "lint-staged": {

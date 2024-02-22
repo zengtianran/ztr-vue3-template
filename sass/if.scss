@@ -1,0 +1,27 @@
+
+$type: 'dark';
+
+
+p{
+    @if($type == 'bold'){
+        color: green
+    }@else if ($type == 'dark'){
+        color: black
+    }@else{
+        color: white;
+    }
+}
+
+@mixin type-color($type) {
+    @if($type == 'bold'){
+        color: green
+    }@else if ($type == 'dark'){
+        color: black
+    }@else{
+        color: white;
+    }
+}
+
+h3{
+    @include type-color('bold')
+}

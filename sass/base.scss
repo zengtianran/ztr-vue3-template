@@ -1,0 +1,30 @@
+
+
+/*****
+node-sass 将scss编译成css
+1、监听一个文件，如果scss文件中有变化，就会产生相对应的css文件。（--watch可以简写为 -w）
+   方法 ：node-sass --watch <源文件> <目标文件>
+2、监听文件夹：源文件夹的代码发生变化，立刻生成css文件夹中的css文件
+   方法：node-sass -w -r <源文件夹> -o <目标文件夹>
+3、也可以使用  
+   node-sass -w -r scss -o css --output-style compressed，控制编译之后的css代码风格
+   输出css风格，可选四个值 nested | expanded | compact | compressed
+     1.嵌套输出 nested:
+     2.展开输出 expanded
+     3.紧凑输出 compact
+     4.压缩输出 compressed
+****/
+
+
+
+$nav-color: #ff0;
+$nav-width: 100px;
+
+.nav{
+    width: $nav-width;
+    color: $nav-color;
+    border: 1px solid $nav-color;
+    h3{
+        font-size: 48px;
+    }
+}

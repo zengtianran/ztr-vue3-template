@@ -1,0 +1,15 @@
+/* 暗色主题 */
+html[data-theme="dark"] {
+  --z-primary-color: var(--van-blue);
+  --z-text-color: var(--van-black);
+  --z-bg-color: var(--van-gray-6);
+  --z-bg-color-2: var(--van-gradient-red);
+}
+
+/* 亮色主题 */
+:root {
+  --z-primary-color: var(--van-green);
+  --z-text-color: var(--van-white);
+  --z-bg-color: var(--van-gray-2);
+  --z-bg-color-2: var(--van-gradient-orange);
+}
