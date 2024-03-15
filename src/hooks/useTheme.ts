@@ -12,7 +12,7 @@ watchEffect(() => {
   localStorage.setItem(STORE_KEY, theme.value);
 });
 
-export function useTheme() {
+export function useTheme(): Record<"theme", typeof theme> {
   return {
     theme
   };

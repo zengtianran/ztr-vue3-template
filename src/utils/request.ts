@@ -40,6 +40,7 @@ class Http {
     // 配置响应参数拦截
     instance.interceptors.response.use(
       (response: AxiosResponse): any => {
+        console.log("responseAxiosResponse :>> ", response);
         // axios默认请求判断状态
         if (response.status === 200) {
           // 成功过滤处理，返回数据对象，属性信息走配置文件的配置

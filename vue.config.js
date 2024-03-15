@@ -30,7 +30,7 @@ module.exports = {
     });
   },
   configureWebpack: {
-    devtool: 'source-map'
+    devtool: "source-map"
   },
   css: {
     loaderOptions: {
@@ -66,17 +66,17 @@ module.exports = {
     open: false,
     https: false,
     host: "0.0.0.0",
-    // proxy: {
-    //   "/api2": {
-    //     target: process.env.VUE_APP_API_SERVER,
-    //     changeOrigin: true,
-    //     secure: false,
-    //     pathRewrite: {
-    //       "^/api": "/api"
-    //     },
-    //     onProxyReq
-    //   }
-    // },
-    before: require("./mock/mock-server.js")
+    proxy: {
+      "/sse": {
+        target: "http://192.168.100.78:8131",
+        changeOrigin: true,
+        secure: false,
+        pathRewrite: {
+          "^/dev-api/sse": "/sse"
+        },
+        onProxyReq
+      }
+    }
+    // before: require("./mock/mock-server.js")
   }
 };
